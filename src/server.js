@@ -14,6 +14,10 @@ try {
     var skipRequireExtensions = require('./index').skipRequireExtensions;
     var cwd = process.cwd();
     var pkg = require('../package.json');
+    
+    require("jsdom-global")(undefined, {
+      pretendToBeVisual: true
+    });
 
     skipRequireExtensions();
 
